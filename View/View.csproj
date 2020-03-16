@@ -46,27 +46,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmProduct.Designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -85,6 +89,133 @@
       <Project>{289ef8f8-6d57-4409-918c-3442d25c0c7d}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-desable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-system.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-system-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-desable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modify-desable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modify-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moviment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moviment-desable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moviment-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poweroff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poweroff-desable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poweroff-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product_desable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register-disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-desable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-desable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting-desable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sing-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sing-out-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload-desable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view-desable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view-hover.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
