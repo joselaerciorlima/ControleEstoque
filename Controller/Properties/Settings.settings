@@ -3,16 +3,16 @@
   <Profiles />
   <Settings>
     <Setting Name="server" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="userDataBase" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="passDataBase" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">NTBK-JOSE\SQLEXPRESS</Value>
     </Setting>
     <Setting Name="dataBase" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">PROJETOPILOTO_BD</Value>
+    </Setting>
+    <Setting Name="userDataBase" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sa</Value>
+    </Setting>
+    <Setting Name="passDataBase" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sa</Value>
     </Setting>
   </Settings>
 </SettingsFile>

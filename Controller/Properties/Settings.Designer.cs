@@ -25,7 +25,7 @@ namespace Controller.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("NTBK-JOSE\\SQLEXPRESS")]
         public string server {
             get {
                 return ((string)(this["server"]));
@@ -37,7 +37,19 @@ namespace Controller.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("PROJETOPILOTO_BD")]
+        public string dataBase {
+            get {
+                return ((string)(this["dataBase"]));
+            }
+            set {
+                this["dataBase"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("sa")]
         public string userDataBase {
             get {
                 return ((string)(this["userDataBase"]));
@@ -49,25 +61,13 @@ namespace Controller.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("sa")]
         public string passDataBase {
             get {
                 return ((string)(this["passDataBase"]));
             }
             set {
                 this["passDataBase"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string dataBase {
-            get {
-                return ((string)(this["dataBase"]));
-            }
-            set {
-                this["dataBase"] = value;
             }
         }
     }

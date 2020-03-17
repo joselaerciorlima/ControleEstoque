@@ -124,9 +124,9 @@
          this.lbltitleForm.Location = new System.Drawing.Point(277, 109);
          this.lbltitleForm.Margin = new System.Windows.Forms.Padding(0);
          this.lbltitleForm.Name = "lbltitleForm";
-         this.lbltitleForm.Size = new System.Drawing.Size(288, 29);
+         this.lbltitleForm.Size = new System.Drawing.Size(159, 29);
          this.lbltitleForm.TabIndex = 117;
-         this.lbltitleForm.Text = "CADASTRAR PRODUTO";
+         this.lbltitleForm.Text = "TITLE FORM";
          this.lbltitleForm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
          // 
          // label3
@@ -376,6 +376,7 @@
          this.btnUpload.Size = new System.Drawing.Size(158, 50);
          this.btnUpload.TabIndex = 136;
          this.btnUpload.TabStop = false;
+         this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
          this.btnUpload.MouseEnter += new System.EventHandler(this.btnSave_MouseEnter);
          this.btnUpload.MouseLeave += new System.EventHandler(this.btnSave_MouseLeave);
          // 
@@ -521,5 +522,5 @@
         private System.Windows.Forms.RadioButton rbtActive;
         private System.Windows.Forms.Label label12;
       private System.Windows.Forms.ErrorProvider errorProvider;
-   }
+    }
 }

@@ -40,6 +40,24 @@ namespace Controller
 			}
       }
 
+		public int GetNewCodProduct()
+		{
+			try
+			{
+				string query = "SELECT MAX(codproduct) AS codproduct FROM TBPRODUCT";
+
+				SqlCommand command = new SqlCommand(query, connectionDataBase.Conect());
+
+				return Convert.ToInt32(command.ExecuteScalar());
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+
+		}
+
 		/// <summary>
 		/// Método responsável por salvar os valores dentro do objeto Produto no banco de dados para atualizar de acordo com o código.
 		/// </summary>
