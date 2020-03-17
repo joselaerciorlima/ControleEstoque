@@ -14,6 +14,8 @@ namespace View
 {
    public partial class frmRegisterProduct : Form
    {
+      ProductController productController = new ProductController();
+      ActivityModel selectedActivity;
       public frmRegisterProduct(ProductModel product,ActivityModel activity) //Carrega o formulário com o objeto Produto e a ação a ser realizada
       {
          InitializeComponent();
@@ -24,6 +26,7 @@ namespace View
          btnCancel.BackgroundImage = Properties.Resources.cancel;
          pcbIcon.BackgroundImage = Properties.Resources.icon_form;
 
+         this.selectedActivity = activity;
          switch (activity)
          {
             case ActivityModel.Register:
@@ -125,6 +128,36 @@ namespace View
          return true;
       }
       //=============================================================================================
+      //Método que cria um novo registro no banco de dados com as informações dos controles.
+      void Register()
+      {
+         if (Validation())
+         {
+            try
+            {
+               ProductModel product = new ProductModel();
+
+               product.typeproduct = cbxType.SelectedIndex.ToString();
+               product.modelproduct = txtModel.Text;
+               product.providerproduct = txtProvider.Text;
+               product.sizeproduct = cbxSize.SelectedIndex.ToString();
+               product.valueproduct = Convert.ToDecimal(txtValue.Text);
+               product.storageproduct = txtStorage.Text;
+               //product.imageproduct = ;
+               product.logproduct = "Usuário logado: GESTOR. >>> Data e hora da operação: " + DateTime.Now;
+
+               int code = productController.Register(product); //Chama o método de INSERT que está dentro da classe ProductControler passando o objeto controle como parâmetro. Ela foi instânciada globalmente.
+
+               MessageBox.Show("O produto foi cadastrado!", "Êxito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               this.Close();
+            }
+            catch (Exception error)
+            {
+               MessageBox.Show("Algo deu errado. Detalhes: " + error.Message, "Op's", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+         }
+      }
+      //=============================================================================================
       //####################### EVENTO DOS CONTROLES ################################################
       private void btnSave_MouseEnter(object sender, EventArgs e)
       {
@@ -135,10 +168,23 @@ namespace View
       {
          LeaveButton(sender);
       }
-
+      //=============================================================================================
       private void btnSave_Click(object sender, EventArgs e)
       {
-         Validation();
+         switch (this.selectedActivity)
+         {
+            case ActivityModel.Register:
+               Register();
+               break;
+            case ActivityModel.Update:
+               //Modify();
+               break;
+         }
+      }
+      //=============================================================================================
+      private void btnCancel_Click(object sender, EventArgs e)
+      {
+         this.Close();
       }
    }
 }

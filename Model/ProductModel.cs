@@ -8,7 +8,7 @@
       public int codproduct { get; set; } //Código do produto
       public string typeproduct { get; set; } //Tipo do produto
       public string modelproduct { get; set; } //Modelo do produto
-      public string providerproduct { get; set; } //fornecedor do produto (marca)
+      public string providerproduct { get; set; } //Fornecedor do produto (marca)
       public string sizeproduct { get; set; } //Tamanho do produto
       public decimal valueproduct { get; set; } //Valor unitário do produto
       public string storageproduct { get; set; } //Localização do produto
