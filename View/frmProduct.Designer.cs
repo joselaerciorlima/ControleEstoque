@@ -36,6 +36,7 @@
          System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
          System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
          System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProduct));
          this.btnModify = new System.Windows.Forms.PictureBox();
          this.btnRegister = new System.Windows.Forms.PictureBox();
          this.btnCancel = new System.Windows.Forms.PictureBox();
@@ -460,6 +461,7 @@
          this.Controls.Add(this.btnDelete);
          this.Controls.Add(this.groupBox1);
          this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+         this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
          this.MinimumSize = new System.Drawing.Size(1300, 650);
          this.Name = "frmProduct";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
