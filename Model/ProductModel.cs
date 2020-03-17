@@ -11,7 +11,6 @@
       public string providerproduct { get; set; } //Fornecedor do produto (marca)
       public string sizeproduct { get; set; } //Tamanho do produto
       public decimal valueproduct { get; set; } //Valor unitário do produto
-      public string storageproduct { get; set; } //Localização do produto
       public string imageproduct { get; set; } //Endereço local da imagem
       public int statusproduct { get; set; } //Status do produto (ativo/inativo)
       public string logproduct { get; set; } //Armazena todos as alterações referente ao produto (data, hora e usuário)

@@ -148,7 +148,6 @@ namespace View
                product.providerproduct = txtProvider.Text;
                product.sizeproduct = cbxSize.SelectedItem.ToString();
                product.valueproduct = Convert.ToDecimal(txtValue.Text);
-               product.storageproduct = txtStorage.Text;
                product.imageproduct = uploadImage.SaveImage(txtCode.Text,pcbImage.ImageLocation);
                product.logproduct = "Usuário logado: GESTOR >>> Data e hora da operação: " + DateTime.Now;
 

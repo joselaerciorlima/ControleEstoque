@@ -17,8 +17,8 @@ namespace View
       {
          Application.EnableVisualStyles();
          Application.SetCompatibleTextRenderingDefault(false);
-         //Application.Run(new frmProduct());
-         Application.Run(new frmRegisterProduct(null,Model.ActivityModel.Register));
+         Application.Run(new frmProduct());
+         //Application.Run(new frmRegisterProduct(null,Model.ActivityModel.Register));
       }
    }
 }

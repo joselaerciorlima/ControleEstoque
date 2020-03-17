@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,8 +23,9 @@ namespace View
          btnModify.BackgroundImage = Properties.Resources.modify;
          btnDelete.BackgroundImage = Properties.Resources.delete;
          btnCancel.BackgroundImage = Properties.Resources.cancel;
-      }
 
+         Search();
+      }
       //####################### MÉTODOS E FUNÇÕES ##################################################
       //Método que adciona o efeito hover nos botoes.
       private void HoverButton(object sender)
@@ -66,6 +68,50 @@ namespace View
             btnCancel.BackgroundImage = Properties.Resources.cancel;
          }
       }
+      //=============================================================================================
+      void Clear()
+      {
+         if (rbtType.Checked)
+         {
+            txtFilter.Clear();
+            txtFilter.Focus();
+         }
+         else if (rbtModel.Checked)
+         {
+            txtFilter.Clear();
+            txtFilter.Focus();
+         }
+         else if (rbtProvider.Checked)
+         {
+            txtFilter.Clear();
+            txtFilter.Focus();
+         }
+      }
+      //=============================================================================================
+      void Search()
+      {
+         string filterType = "";
+
+         if (rbtType.Checked)
+         {
+            filterType = "typeproduct";
+         }
+         else if (rbtModel.Checked)
+         {
+            filterType = "modelproduct";
+         }
+         else if (rbtProvider.Checked)
+         {
+            filterType = "providerproduct";
+         }
+
+         
+            ProductController productController = new ProductController();
+            dgvData.DataSource = productController.Search(txtFilter.Text, filterType);
+        
+      }
+      //=============================================================================================
+
       //####################### EVENTO DOS CONTROLES ################################################
       private void btnRegister_MouseEnter(object sender, EventArgs e)
       {
@@ -75,6 +121,15 @@ namespace View
       private void btnRegister_MouseLeave(object sender, EventArgs e)
       {
          LeaveButton(sender);
+      }
+
+      private void txtFilter_TextChanged(object sender, EventArgs e)
+      {
+         Search();
+      }
+      private void rbtType_CheckedChanged(object sender, EventArgs e)
+      {
+         Clear();
       }
    }
 }
