@@ -14,7 +14,7 @@
       public string storageproduct { get; set; } //Local onde está o produto
       public string imageproduct { get; set; } //Endereço local da imagem
       public int statusproduct { get; set; } //Status do produto (ativo/inativo)
-      public string logproduct { get; set; } //Armazena todos as alterações referente ao produto (data, hora e usuário)
+
 
    }
 }

@@ -38,8 +38,7 @@ namespace View
          {
             case ActivityModel.Register:
                lbltitleForm.Text = "CADASTRAR PRODUTO";
-               //txtCode.Text = (productController.GetNewCodProduct() + 1).ToString();
-               txtCode.Text = productController.GetNewCodProduct().ToString();
+               txtCode.Text = (productController.GetNewCodProduct() + 1).ToString();
                break;
             case ActivityModel.Update:
                lbltitleForm.Text = "ATUALIZAR CADASTRO DO PRODUTO";

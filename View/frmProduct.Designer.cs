@@ -325,6 +325,7 @@
          this.btnDelete.Size = new System.Drawing.Size(148, 50);
          this.btnDelete.TabIndex = 115;
          this.btnDelete.TabStop = false;
+         this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
          this.btnDelete.MouseEnter += new System.EventHandler(this.btnRegister_MouseEnter);
          this.btnDelete.MouseLeave += new System.EventHandler(this.btnRegister_MouseLeave);
          // 

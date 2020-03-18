@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,8 @@ namespace View
 {
    public partial class frmProduct : Form
    {
+      ProductController productController = new ProductController();
+      int selectedProduct;
       public frmProduct()
       {
          InitializeComponent();
@@ -24,7 +27,7 @@ namespace View
          btnModify.BackgroundImage = Properties.Resources.modify;
          btnDelete.BackgroundImage = Properties.Resources.delete;
          btnCancel.BackgroundImage = Properties.Resources.cancel;
-
+        
          Search();
       }
       //####################### MÉTODOS E FUNÇÕES ##################################################
@@ -99,17 +102,14 @@ namespace View
          }
          else if (rbtModel.Checked)
          {
-            filterType = "modelproduct";
+            filterType = "descriptionproduct";
          }
          else if (rbtProvider.Checked)
          {
             filterType = "providerproduct";
          }
-
          
-            ProductController productController = new ProductController();
-            dgvData.DataSource = productController.Search(txtFilter.Text, filterType);
-        
+         dgvData.DataSource = productController.Search(txtFilter.Text, filterType);
       }
       //=============================================================================================
 
@@ -138,8 +138,9 @@ namespace View
       {
          frmRegisterProduct frmRegisterProduct = new frmRegisterProduct(null, Model.ActivityModel.Register);
          frmRegisterProduct.ShowDialog();
+         Search();
       }
-
+      //=============================================================================================
       private void btnModify_Click(object sender, EventArgs e)
       {
          if (dgvData.SelectedRows.Count == 0)
@@ -156,16 +157,28 @@ namespace View
             productModel.providerproduct = dgvData.CurrentRow.Cells["providerproduct"].Value.ToString();
             productModel.sizeproduct = dgvData.CurrentRow.Cells["sizeproduct"].Value.ToString();
             productModel.valueproduct = Convert.ToDecimal(dgvData.CurrentRow.Cells["valueproduct"].Value);
-            productModel.storageproduct =dgvData.CurrentRow.Cells["storageproduct"].Value.ToString();
+            productModel.storageproduct = dgvData.CurrentRow.Cells["storageproduct"].Value.ToString();
             productModel.imageproduct = dgvData.CurrentRow.Cells["imageproduct"].Value.ToString();
             productModel.statusproduct = Convert.ToInt32(dgvData.CurrentRow.Cells["statusproduct"].Value);
 
-            frmRegisterProduct frmRegisterProduct = new frmRegisterProduct(productModel,ActivityModel.Update);
+            frmRegisterProduct frmRegisterProduct = new frmRegisterProduct(productModel, ActivityModel.Update);
             frmRegisterProduct.ShowDialog();
             Search();
+         }
+      }
+      //=============================================================================================
+      private void btnDelete_Click(object sender, EventArgs e)
+      {
+         if (MessageBox.Show("Deseja remover o produto " + dgvData.CurrentRow.Cells["typeproduct"].Value.ToString().ToUpper() + "?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+         {
+            this.selectedProduct = (int)dgvData.CurrentRow.Cells["codproduct"].Value;
 
+            string imagePath = dgvData.CurrentRow.Cells["imageproduct"].Value.ToString();
 
-            
+            dgvData.Rows.Remove(dgvData.CurrentRow);
+            productController.Remove(selectedProduct,imagePath);
+
+            MessageBox.Show("Produto excluído com sucesso!.", "Êxito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
          }
       }
    }

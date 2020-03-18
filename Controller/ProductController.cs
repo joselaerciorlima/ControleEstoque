@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using Model;
 
 namespace Controller
@@ -16,8 +17,8 @@ namespace Controller
       {
          try
          {
-            string query = "INSERT INTO TBPRODUCT (typeproduct,descriptionproduct,providerproduct,sizeproduct,valueproduct,storageproduct,imageproduct,logproduct)" +
-               "VALUES(@typeproduct,@descriptionproduct,@providerproduct,@sizeproduct,@valueproduct, @storageproduct,@imageproduct,@logproduct);" +
+            string query = "INSERT INTO TBPRODUCT (typeproduct,descriptionproduct,providerproduct,sizeproduct,valueproduct,storageproduct,imageproduct)" +
+               "VALUES(@typeproduct,@descriptionproduct,@providerproduct,@sizeproduct,@valueproduct, @storageproduct,@imageproduct);" +
                "INSERT INTO TBLOG (datelog,userlog,descriptionlog) " +
                "VALUES (@datelog, @userlog,@descriptionlog)";
 
@@ -30,7 +31,6 @@ namespace Controller
             command.Parameters.AddWithValue("@valueproduct", product.valueproduct);
             command.Parameters.AddWithValue("@storageproduct", product.storageproduct);
             command.Parameters.AddWithValue("@imageproduct", product.imageproduct);
-            command.Parameters.AddWithValue("@logproduct", product.logproduct);
 
             command.Parameters.AddWithValue("@datelog", DateTime.Now);
             command.Parameters.AddWithValue("@userlog", "GESTOR");
@@ -56,22 +56,11 @@ namespace Controller
       {
          try
          {
-            string query = "SELECT MAX(codproduct) AS codproduct FROM TBPRODUCT";
+            string query = "SELECT IDENT_CURRENT('TBPRODUCT')";
 
             SqlCommand command = new SqlCommand(query, connectionDataBase.Conect());
 
-            var objResult = command.ExecuteScalar();
-            int result;
-
-            if (objResult != DBNull.Value && objResult != null) //Se já existir algo na tabela do banco de dados, ele acrescenta 1 no código.
-            {
-               return result = (int)objResult + 1;
-            }
-            else
-            {
-               return result = 1; //Se for o primeiro lançamento, ele retorna 1.
-            }
-
+            return Convert.ToInt32(command.ExecuteScalar());
          }
          catch (Exception error)
          {
@@ -160,20 +149,34 @@ namespace Controller
       /// <summary>
       /// Método responsável por deletar o registro no banco de dados de acordo com o código.
       /// </summary>
-      public int Remove(int codproduct)
+      public int Remove(int codproduct,string imagePath)
       {
          try
          {
-            return 1;
+            string query = "DELETE FROM TBPRODUCT WHERE (codproduct = @codproduct); INSERT INTO TBLOG (datelog,userlog,descriptionlog) VALUES (@datelog, @userlog, @descriptionlog)";
+
+            SqlCommand command = new SqlCommand(query, connectionDataBase.Conect());
+
+            command.Parameters.AddWithValue("@codproduct", codproduct);
+
+            command.Parameters.AddWithValue("@datelog", DateTime.Now);
+            command.Parameters.AddWithValue("@userlog", "GESTOR");
+            command.Parameters.AddWithValue("@descriptionlog", "PRODUTO DELETADO");
+
+            if (File.Exists(imagePath))
+            {
+               File.Delete(imagePath);
+            }
+
+            return Convert.ToInt32(command.ExecuteNonQuery());
          }
          catch (Exception error)
          {
-
             throw error;
          }
          finally
          {
-
+            connectionDataBase.Disconect();
          }
       }
    }
