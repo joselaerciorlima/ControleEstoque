@@ -1,4 +1,5 @@
 ﻿using Controller;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -122,14 +123,50 @@ namespace View
       {
          LeaveButton(sender);
       }
-
+      //=============================================================================================
       private void txtFilter_TextChanged(object sender, EventArgs e)
       {
          Search();
       }
+      //=============================================================================================
       private void rbtType_CheckedChanged(object sender, EventArgs e)
       {
          Clear();
+      }
+      //=============================================================================================
+      private void btnRegister_Click(object sender, EventArgs e)
+      {
+         frmRegisterProduct frmRegisterProduct = new frmRegisterProduct(null, Model.ActivityModel.Register);
+         frmRegisterProduct.ShowDialog();
+      }
+
+      private void btnModify_Click(object sender, EventArgs e)
+      {
+         if (dgvData.SelectedRows.Count == 0)
+         {
+            MessageBox.Show("Você precisa selecionar um produto.", "Op's!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+         }
+         else
+         {
+            ProductModel productModel = new ProductModel();
+
+            productModel.codproduct = Convert.ToInt32(dgvData.CurrentRow.Cells["codproduct"].Value);
+            productModel.typeproduct = dgvData.CurrentRow.Cells["typeproduct"].Value.ToString();
+            productModel.descriptionproduct = dgvData.CurrentRow.Cells["descriptionproduct"].Value.ToString();
+            productModel.providerproduct = dgvData.CurrentRow.Cells["providerproduct"].Value.ToString();
+            productModel.sizeproduct = dgvData.CurrentRow.Cells["sizeproduct"].Value.ToString();
+            productModel.valueproduct = Convert.ToDecimal(dgvData.CurrentRow.Cells["valueproduct"].Value);
+            productModel.storageproduct =dgvData.CurrentRow.Cells["storageproduct"].Value.ToString();
+            productModel.imageproduct = dgvData.CurrentRow.Cells["imageproduct"].Value.ToString();
+            productModel.statusproduct = Convert.ToInt32(dgvData.CurrentRow.Cells["statusproduct"].Value);
+
+            frmRegisterProduct frmRegisterProduct = new frmRegisterProduct(productModel,ActivityModel.Update);
+            frmRegisterProduct.ShowDialog();
+            Search();
+
+
+            
+         }
       }
    }
 }

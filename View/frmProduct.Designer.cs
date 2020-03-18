@@ -58,15 +58,15 @@
          this.groupBoxFilter = new System.Windows.Forms.GroupBox();
          this.codproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
          this.typeproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.model = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.provider = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
+         this.descriptionproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+         this.providerproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+         this.sizeproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
          this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
          this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.storage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.valuetotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.image = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+         this.storageproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+         this.imageproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+         this.valueproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+         this.statusproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
          ((System.ComponentModel.ISupportInitialize)(this.btnModify)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.btnRegister)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
@@ -87,6 +87,7 @@
          this.btnModify.Size = new System.Drawing.Size(160, 50);
          this.btnModify.TabIndex = 116;
          this.btnModify.TabStop = false;
+         this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
          this.btnModify.MouseEnter += new System.EventHandler(this.btnRegister_MouseEnter);
          this.btnModify.MouseLeave += new System.EventHandler(this.btnRegister_MouseLeave);
          // 
@@ -101,6 +102,7 @@
          this.btnRegister.Size = new System.Drawing.Size(176, 50);
          this.btnRegister.TabIndex = 114;
          this.btnRegister.TabStop = false;
+         this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
          this.btnRegister.MouseEnter += new System.EventHandler(this.btnRegister_MouseEnter);
          this.btnRegister.MouseLeave += new System.EventHandler(this.btnRegister_MouseLeave);
          // 
@@ -151,15 +153,15 @@
          this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codproduct,
             this.typeproduct,
-            this.model,
-            this.provider,
-            this.size,
+            this.descriptionproduct,
+            this.providerproduct,
+            this.sizeproduct,
             this.amount,
             this.value,
-            this.storage,
-            this.valuetotal,
-            this.image,
-            this.status});
+            this.storageproduct,
+            this.imageproduct,
+            this.valueproduct,
+            this.statusproduct});
          dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
          dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
          dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 12F);
@@ -361,42 +363,42 @@
          this.typeproduct.ReadOnly = true;
          this.typeproduct.Width = 71;
          // 
-         // model
+         // descriptionproduct
          // 
-         this.model.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-         this.model.DataPropertyName = "modelproduct";
+         this.descriptionproduct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+         this.descriptionproduct.DataPropertyName = "descriptionproduct";
          dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
          dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 13F);
          dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-         this.model.DefaultCellStyle = dataGridViewCellStyle3;
-         this.model.HeaderText = "MODELO";
-         this.model.Name = "model";
-         this.model.ReadOnly = true;
-         this.model.Width = 104;
+         this.descriptionproduct.DefaultCellStyle = dataGridViewCellStyle3;
+         this.descriptionproduct.HeaderText = "DESCRIÇÃO";
+         this.descriptionproduct.Name = "descriptionproduct";
+         this.descriptionproduct.ReadOnly = true;
+         this.descriptionproduct.Width = 131;
          // 
-         // provider
+         // providerproduct
          // 
-         this.provider.DataPropertyName = "providerproduct";
+         this.providerproduct.DataPropertyName = "providerproduct";
          dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
          dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 13F);
          dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-         this.provider.DefaultCellStyle = dataGridViewCellStyle4;
-         this.provider.HeaderText = "FORNECEDOR";
-         this.provider.Name = "provider";
-         this.provider.ReadOnly = true;
+         this.providerproduct.DefaultCellStyle = dataGridViewCellStyle4;
+         this.providerproduct.HeaderText = "FORNECEDOR";
+         this.providerproduct.Name = "providerproduct";
+         this.providerproduct.ReadOnly = true;
          // 
-         // size
+         // sizeproduct
          // 
-         this.size.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-         this.size.DataPropertyName = "sizeproduct";
+         this.sizeproduct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+         this.sizeproduct.DataPropertyName = "sizeproduct";
          dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
          dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 13F);
          dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-         this.size.DefaultCellStyle = dataGridViewCellStyle5;
-         this.size.HeaderText = "TAMANHO";
-         this.size.Name = "size";
-         this.size.ReadOnly = true;
-         this.size.Width = 114;
+         this.sizeproduct.DefaultCellStyle = dataGridViewCellStyle5;
+         this.sizeproduct.HeaderText = "TAMANHO";
+         this.sizeproduct.Name = "sizeproduct";
+         this.sizeproduct.ReadOnly = true;
+         this.sizeproduct.Width = 114;
          // 
          // amount
          // 
@@ -428,40 +430,40 @@
          this.value.ReadOnly = true;
          this.value.Width = 145;
          // 
-         // storage
+         // storageproduct
          // 
-         this.storage.DataPropertyName = "storage";
+         this.storageproduct.DataPropertyName = "storageproduct";
          dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
          dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 13F);
          dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-         this.storage.DefaultCellStyle = dataGridViewCellStyle8;
-         this.storage.HeaderText = "LOCALIZAÇÂO";
-         this.storage.Name = "storage";
-         this.storage.ReadOnly = true;
+         this.storageproduct.DefaultCellStyle = dataGridViewCellStyle8;
+         this.storageproduct.HeaderText = "LOCALIZAÇÂO";
+         this.storageproduct.Name = "storageproduct";
+         this.storageproduct.ReadOnly = true;
          // 
-         // valuetotal
+         // imageproduct
          // 
-         this.valuetotal.DataPropertyName = "valueproduct";
-         this.valuetotal.HeaderText = "valueproduct";
-         this.valuetotal.Name = "valuetotal";
-         this.valuetotal.ReadOnly = true;
-         this.valuetotal.Visible = false;
+         this.imageproduct.DataPropertyName = "imageproduct";
+         this.imageproduct.HeaderText = "image";
+         this.imageproduct.Name = "imageproduct";
+         this.imageproduct.ReadOnly = true;
+         this.imageproduct.Visible = false;
          // 
-         // image
+         // valueproduct
          // 
-         this.image.DataPropertyName = "imageproduct";
-         this.image.HeaderText = "image";
-         this.image.Name = "image";
-         this.image.ReadOnly = true;
-         this.image.Visible = false;
+         this.valueproduct.DataPropertyName = "valueproduct";
+         this.valueproduct.HeaderText = "valueproduct";
+         this.valueproduct.Name = "valueproduct";
+         this.valueproduct.ReadOnly = true;
+         this.valueproduct.Visible = false;
          // 
-         // status
+         // statusproduct
          // 
-         this.status.DataPropertyName = "statusproduct";
-         this.status.HeaderText = "status";
-         this.status.Name = "status";
-         this.status.ReadOnly = true;
-         this.status.Visible = false;
+         this.statusproduct.DataPropertyName = "statusproduct";
+         this.statusproduct.HeaderText = "status";
+         this.statusproduct.Name = "statusproduct";
+         this.statusproduct.ReadOnly = true;
+         this.statusproduct.Visible = false;
          // 
          // frmProduct
          // 
@@ -526,15 +528,15 @@
         private System.Windows.Forms.GroupBox groupBoxFilter;
         private System.Windows.Forms.DataGridViewTextBoxColumn codproduct;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeproduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn model;
-        private System.Windows.Forms.DataGridViewTextBoxColumn provider;
-        private System.Windows.Forms.DataGridViewTextBoxColumn size;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionproduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn providerproduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sizeproduct;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn value;
-        private System.Windows.Forms.DataGridViewTextBoxColumn storage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valuetotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn image;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn storageproduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imageproduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valueproduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusproduct;
     }
 }
 

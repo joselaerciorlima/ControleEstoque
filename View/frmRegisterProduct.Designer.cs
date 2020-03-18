@@ -40,7 +40,7 @@
          this.label5 = new System.Windows.Forms.Label();
          this.cbxType = new System.Windows.Forms.ComboBox();
          this.label7 = new System.Windows.Forms.Label();
-         this.txtModel = new System.Windows.Forms.TextBox();
+         this.txtDescription = new System.Windows.Forms.TextBox();
          this.label8 = new System.Windows.Forms.Label();
          this.label4 = new System.Windows.Forms.Label();
          this.txtProvider = new System.Windows.Forms.TextBox();
@@ -175,7 +175,7 @@
             "BIBLÍA"});
          this.cbxType.Location = new System.Drawing.Point(144, 282);
          this.cbxType.Name = "cbxType";
-         this.cbxType.Size = new System.Drawing.Size(332, 39);
+         this.cbxType.Size = new System.Drawing.Size(292, 39);
          this.cbxType.TabIndex = 0;
          // 
          // label7
@@ -191,28 +191,28 @@
          this.label7.Text = "Tipo de Produto";
          this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
          // 
-         // txtModel
+         // txtDescription
          // 
-         this.txtModel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+         this.txtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-         this.txtModel.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-         this.txtModel.Font = new System.Drawing.Font("Arial", 20F);
-         this.txtModel.Location = new System.Drawing.Point(500, 283);
-         this.txtModel.Name = "txtModel";
-         this.txtModel.Size = new System.Drawing.Size(376, 38);
-         this.txtModel.TabIndex = 1;
+         this.txtDescription.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+         this.txtDescription.Font = new System.Drawing.Font("Arial", 20F);
+         this.txtDescription.Location = new System.Drawing.Point(460, 282);
+         this.txtDescription.Name = "txtDescription";
+         this.txtDescription.Size = new System.Drawing.Size(416, 38);
+         this.txtDescription.TabIndex = 1;
          // 
          // label8
          // 
          this.label8.AutoSize = true;
          this.label8.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.label8.ForeColor = System.Drawing.Color.White;
-         this.label8.Location = new System.Drawing.Point(496, 250);
+         this.label8.Location = new System.Drawing.Point(456, 249);
          this.label8.Margin = new System.Windows.Forms.Padding(0);
          this.label8.Name = "label8";
-         this.label8.Size = new System.Drawing.Size(99, 29);
+         this.label8.Size = new System.Drawing.Size(126, 29);
          this.label8.TabIndex = 133;
-         this.label8.Text = "Modelo";
+         this.label8.Text = "Descrição";
          this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
          // 
          // label4
@@ -454,7 +454,7 @@
          this.Controls.Add(this.btnUpload);
          this.Controls.Add(this.pcbImage);
          this.Controls.Add(this.label4);
-         this.Controls.Add(this.txtModel);
+         this.Controls.Add(this.txtDescription);
          this.Controls.Add(this.label8);
          this.Controls.Add(this.cbxType);
          this.Controls.Add(this.label7);
@@ -505,7 +505,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbxType;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtModel;
+        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pcbImage;
         private System.Windows.Forms.Label label4;

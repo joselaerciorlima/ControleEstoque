@@ -69,7 +69,12 @@ namespace View
 			try
 			{
 				string destinationPath = Path.Combine(newLocation, imageName);
-
+				
+				if (File.Exists(destinationPath))
+				{
+					File.Delete(destinationPath);
+				}
+				
 				File.Copy(imageLocation, destinationPath);
 
 				return destinationPath;
