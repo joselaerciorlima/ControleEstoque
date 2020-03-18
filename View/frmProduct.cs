@@ -1,14 +1,6 @@
 ﻿using Controller;
 using Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace View
@@ -180,6 +172,11 @@ namespace View
 
             MessageBox.Show("Produto excluído com sucesso!.", "Êxito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
          }
+      }
+      //=============================================================================================
+      private void btnCancel_Click(object sender, EventArgs e)
+      {
+         this.Close();
       }
    }
 }

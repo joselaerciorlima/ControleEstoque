@@ -103,7 +103,6 @@ namespace Controller
          }
          catch (Exception error)
          {
-
             throw error;
          }
          finally
@@ -117,8 +116,6 @@ namespace Controller
       /// </summary>
       public DataTable Search(string filter, string filterType)
       {
-         //SqlCommand command = new SqlCommand("SELECT typeproduct,modelproduct,providerproduct,sizeproduct,valueproduct,imageproduct FROM TBPRODUCT WHERE " + filterType + " LIKE '%" + filter + "%' ORDER BY typeproduct", connectionDataBase.Conect());
-
          string query = "SELECT p.codproduct,p.typeproduct,p.descriptionproduct,p.providerproduct," +
             "p.sizeproduct,p.valueproduct,p.storageproduct,p.imageproduct,p.statusproduct, " +
             "o.amount, (p.valueproduct * o.amount) as total " +
@@ -126,7 +123,6 @@ namespace Controller
             "WHERE " + filterType + " LIKE '%" + filter + "%'ORDER BY p.typeproduct";
 
          SqlCommand command = new SqlCommand(query, connectionDataBase.Conect());
-
          
          try
          {
