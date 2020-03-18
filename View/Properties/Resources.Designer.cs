@@ -193,9 +193,9 @@ namespace View.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap moviment {
+        internal static System.Drawing.Bitmap movement {
             get {
-                object obj = ResourceManager.GetObject("moviment", resourceCulture);
+                object obj = ResourceManager.GetObject("movement", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace View.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap moviment_desable {
+        internal static System.Drawing.Bitmap movement_desable {
             get {
-                object obj = ResourceManager.GetObject("moviment_desable", resourceCulture);
+                object obj = ResourceManager.GetObject("movement_desable", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace View.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap moviment_hover {
+        internal static System.Drawing.Bitmap movement_hover {
             get {
-                object obj = ResourceManager.GetObject("moviment_hover", resourceCulture);
+                object obj = ResourceManager.GetObject("movement_hover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

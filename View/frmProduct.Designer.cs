@@ -38,98 +38,43 @@
          System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
          System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
          System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProduct));
-         this.btnModify = new System.Windows.Forms.PictureBox();
-         this.btnRegister = new System.Windows.Forms.PictureBox();
-         this.btnCancel = new System.Windows.Forms.PictureBox();
-         this.pcbIcon = new System.Windows.Forms.PictureBox();
          this.dgvData = new System.Windows.Forms.DataGridView();
          this.txtFilter = new System.Windows.Forms.TextBox();
          this.pnlRodape = new System.Windows.Forms.Panel();
          this.label5 = new System.Windows.Forms.Label();
-         this.btnHome = new System.Windows.Forms.Label();
          this.label2 = new System.Windows.Forms.Label();
          this.panel2 = new System.Windows.Forms.Panel();
          this.label1 = new System.Windows.Forms.Label();
-         this.label3 = new System.Windows.Forms.Label();
-         this.rbtProvider = new System.Windows.Forms.RadioButton();
-         this.rbtModel = new System.Windows.Forms.RadioButton();
+         this.rbtSize = new System.Windows.Forms.RadioButton();
+         this.rbtDescription = new System.Windows.Forms.RadioButton();
          this.rbtType = new System.Windows.Forms.RadioButton();
-         this.btnDelete = new System.Windows.Forms.PictureBox();
          this.groupBoxFilter = new System.Windows.Forms.GroupBox();
+         this.label3 = new System.Windows.Forms.Label();
+         this.btnModify = new System.Windows.Forms.PictureBox();
+         this.btnMovement = new System.Windows.Forms.PictureBox();
+         this.btnRegister = new System.Windows.Forms.PictureBox();
+         this.btnCancel = new System.Windows.Forms.PictureBox();
+         this.pcbIcon = new System.Windows.Forms.PictureBox();
+         this.btnDelete = new System.Windows.Forms.PictureBox();
          this.codproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
          this.typeproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
          this.descriptionproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.providerproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.sizeproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+         this.provider = new System.Windows.Forms.DataGridViewTextBoxColumn();
+         this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
          this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.storageproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+         this.valuetotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+         this.storage = new System.Windows.Forms.DataGridViewTextBoxColumn();
          this.imageproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.valueproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
          this.statusproduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+         ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
+         this.groupBoxFilter.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.btnModify)).BeginInit();
+         ((System.ComponentModel.ISupportInitialize)(this.btnMovement)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.btnRegister)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.pcbIcon)).BeginInit();
-         ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
-         this.groupBoxFilter.SuspendLayout();
          this.SuspendLayout();
-         // 
-         // btnModify
-         // 
-         this.btnModify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-         this.btnModify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(81)))), ((int)(((byte)(116)))));
-         this.btnModify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-         this.btnModify.Cursor = System.Windows.Forms.Cursors.Hand;
-         this.btnModify.Location = new System.Drawing.Point(753, 93);
-         this.btnModify.Name = "btnModify";
-         this.btnModify.Size = new System.Drawing.Size(160, 50);
-         this.btnModify.TabIndex = 116;
-         this.btnModify.TabStop = false;
-         this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
-         this.btnModify.MouseEnter += new System.EventHandler(this.btnRegister_MouseEnter);
-         this.btnModify.MouseLeave += new System.EventHandler(this.btnRegister_MouseLeave);
-         // 
-         // btnRegister
-         // 
-         this.btnRegister.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-         this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(81)))), ((int)(((byte)(116)))));
-         this.btnRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-         this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-         this.btnRegister.Location = new System.Drawing.Point(571, 93);
-         this.btnRegister.Name = "btnRegister";
-         this.btnRegister.Size = new System.Drawing.Size(176, 50);
-         this.btnRegister.TabIndex = 114;
-         this.btnRegister.TabStop = false;
-         this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-         this.btnRegister.MouseEnter += new System.EventHandler(this.btnRegister_MouseEnter);
-         this.btnRegister.MouseLeave += new System.EventHandler(this.btnRegister_MouseLeave);
-         // 
-         // btnCancel
-         // 
-         this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-         this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(81)))), ((int)(((byte)(116)))));
-         this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-         this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-         this.btnCancel.Location = new System.Drawing.Point(1073, 93);
-         this.btnCancel.Name = "btnCancel";
-         this.btnCancel.Size = new System.Drawing.Size(176, 50);
-         this.btnCancel.TabIndex = 108;
-         this.btnCancel.TabStop = false;
-         this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-         this.btnCancel.MouseEnter += new System.EventHandler(this.btnRegister_MouseEnter);
-         this.btnCancel.MouseLeave += new System.EventHandler(this.btnRegister_MouseLeave);
-         // 
-         // pcbIcon
-         // 
-         this.pcbIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-         this.pcbIcon.Location = new System.Drawing.Point(22, 35);
-         this.pcbIcon.Name = "pcbIcon";
-         this.pcbIcon.Size = new System.Drawing.Size(171, 159);
-         this.pcbIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-         this.pcbIcon.TabIndex = 107;
-         this.pcbIcon.TabStop = false;
          // 
          // dgvData
          // 
@@ -155,13 +100,12 @@
             this.codproduct,
             this.typeproduct,
             this.descriptionproduct,
-            this.providerproduct,
-            this.sizeproduct,
+            this.provider,
+            this.size,
             this.amount,
-            this.value,
-            this.storageproduct,
+            this.valuetotal,
+            this.storage,
             this.imageproduct,
-            this.valueproduct,
             this.statusproduct});
          dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
          dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
@@ -216,20 +160,6 @@
          this.label5.Text = "Filtro:";
          this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
          // 
-         // btnHome
-         // 
-         this.btnHome.AutoSize = true;
-         this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-         this.btnHome.Font = new System.Drawing.Font("Font Awesome 5 Free Solid", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.btnHome.ForeColor = System.Drawing.Color.White;
-         this.btnHome.Location = new System.Drawing.Point(205, 99);
-         this.btnHome.Margin = new System.Windows.Forms.Padding(0);
-         this.btnHome.Name = "btnHome";
-         this.btnHome.Size = new System.Drawing.Size(59, 39);
-         this.btnHome.TabIndex = 104;
-         this.btnHome.Text = "HOME";
-         this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-         // 
          // label2
          // 
          this.label2.AutoSize = true;
@@ -248,7 +178,7 @@
          this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
          this.panel2.BackColor = System.Drawing.Color.White;
-         this.panel2.Location = new System.Drawing.Point(212, 155);
+         this.panel2.Location = new System.Drawing.Point(212, 162);
          this.panel2.Name = "panel2";
          this.panel2.Size = new System.Drawing.Size(1072, 14);
          this.panel2.TabIndex = 106;
@@ -258,48 +188,37 @@
          this.label1.AutoSize = true;
          this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.label1.ForeColor = System.Drawing.Color.White;
-         this.label1.Location = new System.Drawing.Point(277, 109);
+         this.label1.Location = new System.Drawing.Point(282, 120);
          this.label1.Margin = new System.Windows.Forms.Padding(0);
          this.label1.Name = "label1";
-         this.label1.Size = new System.Drawing.Size(278, 29);
+         this.label1.Size = new System.Drawing.Size(131, 29);
          this.label1.TabIndex = 103;
-         this.label1.Text = "PESQUISAR PRODUTO";
+         this.label1.Text = "PRODUTO";
          this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
          // 
-         // label3
+         // rbtSize
          // 
-         this.label3.AutoSize = true;
-         this.label3.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label3.ForeColor = System.Drawing.Color.White;
-         this.label3.Location = new System.Drawing.Point(257, 92);
-         this.label3.Name = "label3";
-         this.label3.Size = new System.Drawing.Size(31, 45);
-         this.label3.TabIndex = 109;
-         this.label3.Text = "|";
+         this.rbtSize.AutoSize = true;
+         this.rbtSize.Font = new System.Drawing.Font("Arial", 16F);
+         this.rbtSize.Location = new System.Drawing.Point(403, 36);
+         this.rbtSize.Name = "rbtSize";
+         this.rbtSize.Size = new System.Drawing.Size(119, 29);
+         this.rbtSize.TabIndex = 39;
+         this.rbtSize.Text = "Tamanho";
+         this.rbtSize.UseVisualStyleBackColor = true;
+         this.rbtSize.CheckedChanged += new System.EventHandler(this.rbtType_CheckedChanged);
          // 
-         // rbtProvider
+         // rbtDescription
          // 
-         this.rbtProvider.AutoSize = true;
-         this.rbtProvider.Font = new System.Drawing.Font("Arial", 16F);
-         this.rbtProvider.Location = new System.Drawing.Point(403, 36);
-         this.rbtProvider.Name = "rbtProvider";
-         this.rbtProvider.Size = new System.Drawing.Size(141, 29);
-         this.rbtProvider.TabIndex = 39;
-         this.rbtProvider.Text = "Fornecedor";
-         this.rbtProvider.UseVisualStyleBackColor = true;
-         this.rbtProvider.CheckedChanged += new System.EventHandler(this.rbtType_CheckedChanged);
-         // 
-         // rbtModel
-         // 
-         this.rbtModel.AutoSize = true;
-         this.rbtModel.Font = new System.Drawing.Font("Arial", 16F);
-         this.rbtModel.Location = new System.Drawing.Point(201, 36);
-         this.rbtModel.Name = "rbtModel";
-         this.rbtModel.Size = new System.Drawing.Size(103, 29);
-         this.rbtModel.TabIndex = 39;
-         this.rbtModel.Text = "Modelo";
-         this.rbtModel.UseVisualStyleBackColor = true;
-         this.rbtModel.CheckedChanged += new System.EventHandler(this.rbtType_CheckedChanged);
+         this.rbtDescription.AutoSize = true;
+         this.rbtDescription.Font = new System.Drawing.Font("Arial", 16F);
+         this.rbtDescription.Location = new System.Drawing.Point(201, 36);
+         this.rbtDescription.Name = "rbtDescription";
+         this.rbtDescription.Size = new System.Drawing.Size(128, 29);
+         this.rbtDescription.TabIndex = 39;
+         this.rbtDescription.Text = "Descrição";
+         this.rbtDescription.UseVisualStyleBackColor = true;
+         this.rbtDescription.CheckedChanged += new System.EventHandler(this.rbtType_CheckedChanged);
          // 
          // rbtType
          // 
@@ -315,25 +234,10 @@
          this.rbtType.UseVisualStyleBackColor = true;
          this.rbtType.CheckedChanged += new System.EventHandler(this.rbtType_CheckedChanged);
          // 
-         // btnDelete
-         // 
-         this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-         this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(81)))), ((int)(((byte)(116)))));
-         this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-         this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-         this.btnDelete.Location = new System.Drawing.Point(919, 93);
-         this.btnDelete.Name = "btnDelete";
-         this.btnDelete.Size = new System.Drawing.Size(148, 50);
-         this.btnDelete.TabIndex = 115;
-         this.btnDelete.TabStop = false;
-         this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-         this.btnDelete.MouseEnter += new System.EventHandler(this.btnRegister_MouseEnter);
-         this.btnDelete.MouseLeave += new System.EventHandler(this.btnRegister_MouseLeave);
-         // 
          // groupBoxFilter
          // 
-         this.groupBoxFilter.Controls.Add(this.rbtProvider);
-         this.groupBoxFilter.Controls.Add(this.rbtModel);
+         this.groupBoxFilter.Controls.Add(this.rbtSize);
+         this.groupBoxFilter.Controls.Add(this.rbtDescription);
          this.groupBoxFilter.Controls.Add(this.rbtType);
          this.groupBoxFilter.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
          this.groupBoxFilter.ForeColor = System.Drawing.Color.White;
@@ -343,6 +247,105 @@
          this.groupBoxFilter.TabIndex = 112;
          this.groupBoxFilter.TabStop = false;
          this.groupBoxFilter.Text = "Filtrar Por";
+         // 
+         // label3
+         // 
+         this.label3.AutoSize = true;
+         this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.label3.ForeColor = System.Drawing.Color.White;
+         this.label3.Location = new System.Drawing.Point(215, 91);
+         this.label3.Margin = new System.Windows.Forms.Padding(0);
+         this.label3.Name = "label3";
+         this.label3.Size = new System.Drawing.Size(160, 29);
+         this.label3.TabIndex = 103;
+         this.label3.Text = "PESQUISAR ";
+         this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+         // 
+         // btnModify
+         // 
+         this.btnModify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+         this.btnModify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(81)))), ((int)(((byte)(116)))));
+         this.btnModify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+         this.btnModify.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.btnModify.Location = new System.Drawing.Point(753, 100);
+         this.btnModify.Name = "btnModify";
+         this.btnModify.Size = new System.Drawing.Size(160, 50);
+         this.btnModify.TabIndex = 116;
+         this.btnModify.TabStop = false;
+         this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
+         this.btnModify.MouseEnter += new System.EventHandler(this.btnRegister_MouseEnter);
+         this.btnModify.MouseLeave += new System.EventHandler(this.btnRegister_MouseLeave);
+         // 
+         // btnMovement
+         // 
+         this.btnMovement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+         this.btnMovement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(81)))), ((int)(((byte)(116)))));
+         this.btnMovement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+         this.btnMovement.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.btnMovement.Location = new System.Drawing.Point(543, 100);
+         this.btnMovement.Name = "btnMovement";
+         this.btnMovement.Size = new System.Drawing.Size(204, 50);
+         this.btnMovement.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+         this.btnMovement.TabIndex = 114;
+         this.btnMovement.TabStop = false;
+         this.btnMovement.Click += new System.EventHandler(this.btnMovement_Click);
+         this.btnMovement.MouseEnter += new System.EventHandler(this.btnRegister_MouseEnter);
+         this.btnMovement.MouseLeave += new System.EventHandler(this.btnRegister_MouseLeave);
+         // 
+         // btnRegister
+         // 
+         this.btnRegister.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+         this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(81)))), ((int)(((byte)(116)))));
+         this.btnRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+         this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.btnRegister.Location = new System.Drawing.Point(361, 100);
+         this.btnRegister.Name = "btnRegister";
+         this.btnRegister.Size = new System.Drawing.Size(176, 50);
+         this.btnRegister.TabIndex = 114;
+         this.btnRegister.TabStop = false;
+         this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+         this.btnRegister.MouseEnter += new System.EventHandler(this.btnRegister_MouseEnter);
+         this.btnRegister.MouseLeave += new System.EventHandler(this.btnRegister_MouseLeave);
+         // 
+         // btnCancel
+         // 
+         this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+         this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(81)))), ((int)(((byte)(116)))));
+         this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+         this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.btnCancel.Location = new System.Drawing.Point(1073, 100);
+         this.btnCancel.Name = "btnCancel";
+         this.btnCancel.Size = new System.Drawing.Size(176, 50);
+         this.btnCancel.TabIndex = 108;
+         this.btnCancel.TabStop = false;
+         this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+         this.btnCancel.MouseEnter += new System.EventHandler(this.btnRegister_MouseEnter);
+         this.btnCancel.MouseLeave += new System.EventHandler(this.btnRegister_MouseLeave);
+         // 
+         // pcbIcon
+         // 
+         this.pcbIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+         this.pcbIcon.Location = new System.Drawing.Point(22, 35);
+         this.pcbIcon.Name = "pcbIcon";
+         this.pcbIcon.Size = new System.Drawing.Size(171, 159);
+         this.pcbIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+         this.pcbIcon.TabIndex = 107;
+         this.pcbIcon.TabStop = false;
+         // 
+         // btnDelete
+         // 
+         this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+         this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(81)))), ((int)(((byte)(116)))));
+         this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+         this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.btnDelete.Location = new System.Drawing.Point(919, 100);
+         this.btnDelete.Name = "btnDelete";
+         this.btnDelete.Size = new System.Drawing.Size(148, 50);
+         this.btnDelete.TabIndex = 115;
+         this.btnDelete.TabStop = false;
+         this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+         this.btnDelete.MouseEnter += new System.EventHandler(this.btnRegister_MouseEnter);
+         this.btnDelete.MouseLeave += new System.EventHandler(this.btnRegister_MouseLeave);
          // 
          // codproduct
          // 
@@ -378,29 +381,29 @@
          this.descriptionproduct.ReadOnly = true;
          this.descriptionproduct.Width = 131;
          // 
-         // providerproduct
+         // provider
          // 
-         this.providerproduct.DataPropertyName = "providerproduct";
+         this.provider.DataPropertyName = "descriptionprovider";
          dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
          dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 13F);
          dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-         this.providerproduct.DefaultCellStyle = dataGridViewCellStyle4;
-         this.providerproduct.HeaderText = "FORNECEDOR";
-         this.providerproduct.Name = "providerproduct";
-         this.providerproduct.ReadOnly = true;
+         this.provider.DefaultCellStyle = dataGridViewCellStyle4;
+         this.provider.HeaderText = "FORNECEDOR";
+         this.provider.Name = "provider";
+         this.provider.ReadOnly = true;
          // 
-         // sizeproduct
+         // size
          // 
-         this.sizeproduct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-         this.sizeproduct.DataPropertyName = "sizeproduct";
+         this.size.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+         this.size.DataPropertyName = "descriptionsize";
          dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
          dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 13F);
          dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-         this.sizeproduct.DefaultCellStyle = dataGridViewCellStyle5;
-         this.sizeproduct.HeaderText = "TAMANHO";
-         this.sizeproduct.Name = "sizeproduct";
-         this.sizeproduct.ReadOnly = true;
-         this.sizeproduct.Width = 114;
+         this.size.DefaultCellStyle = dataGridViewCellStyle5;
+         this.size.HeaderText = "TAMANHO";
+         this.size.Name = "size";
+         this.size.ReadOnly = true;
+         this.size.Width = 114;
          // 
          // amount
          // 
@@ -417,31 +420,31 @@
          this.amount.ReadOnly = true;
          this.amount.Width = 79;
          // 
-         // value
+         // valuetotal
          // 
-         this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-         this.value.DataPropertyName = "total";
+         this.valuetotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+         this.valuetotal.DataPropertyName = "valuetotal";
          dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
          dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 13F);
          dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
          dataGridViewCellStyle7.Format = "C2";
          dataGridViewCellStyle7.NullValue = "0,00";
-         this.value.DefaultCellStyle = dataGridViewCellStyle7;
-         this.value.HeaderText = "VALOR TOTAL";
-         this.value.Name = "value";
-         this.value.ReadOnly = true;
-         this.value.Width = 145;
+         this.valuetotal.DefaultCellStyle = dataGridViewCellStyle7;
+         this.valuetotal.HeaderText = "VALOR TOTAL";
+         this.valuetotal.Name = "valuetotal";
+         this.valuetotal.ReadOnly = true;
+         this.valuetotal.Width = 145;
          // 
-         // storageproduct
+         // storage
          // 
-         this.storageproduct.DataPropertyName = "storageproduct";
+         this.storage.DataPropertyName = "descriptionstorage";
          dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
          dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 13F);
          dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-         this.storageproduct.DefaultCellStyle = dataGridViewCellStyle8;
-         this.storageproduct.HeaderText = "LOCALIZAÇÂO";
-         this.storageproduct.Name = "storageproduct";
-         this.storageproduct.ReadOnly = true;
+         this.storage.DefaultCellStyle = dataGridViewCellStyle8;
+         this.storage.HeaderText = "ESTOQUE";
+         this.storage.Name = "storage";
+         this.storage.ReadOnly = true;
          // 
          // imageproduct
          // 
@@ -450,14 +453,6 @@
          this.imageproduct.Name = "imageproduct";
          this.imageproduct.ReadOnly = true;
          this.imageproduct.Visible = false;
-         // 
-         // valueproduct
-         // 
-         this.valueproduct.DataPropertyName = "valueproduct";
-         this.valueproduct.HeaderText = "valueproduct";
-         this.valueproduct.Name = "valueproduct";
-         this.valueproduct.ReadOnly = true;
-         this.valueproduct.Visible = false;
          // 
          // statusproduct
          // 
@@ -475,6 +470,7 @@
          this.ClientSize = new System.Drawing.Size(1284, 611);
          this.Controls.Add(this.label2);
          this.Controls.Add(this.btnModify);
+         this.Controls.Add(this.btnMovement);
          this.Controls.Add(this.btnRegister);
          this.Controls.Add(this.btnCancel);
          this.Controls.Add(this.pcbIcon);
@@ -482,10 +478,9 @@
          this.Controls.Add(this.txtFilter);
          this.Controls.Add(this.pnlRodape);
          this.Controls.Add(this.label5);
-         this.Controls.Add(this.btnHome);
          this.Controls.Add(this.panel2);
-         this.Controls.Add(this.label1);
          this.Controls.Add(this.label3);
+         this.Controls.Add(this.label1);
          this.Controls.Add(this.btnDelete);
          this.Controls.Add(this.groupBoxFilter);
          this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -495,14 +490,15 @@
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "Controle de Estoque - Projeto Piloto";
          this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+         ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
+         this.groupBoxFilter.ResumeLayout(false);
+         this.groupBoxFilter.PerformLayout();
          ((System.ComponentModel.ISupportInitialize)(this.btnModify)).EndInit();
+         ((System.ComponentModel.ISupportInitialize)(this.btnMovement)).EndInit();
          ((System.ComponentModel.ISupportInitialize)(this.btnRegister)).EndInit();
          ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).EndInit();
          ((System.ComponentModel.ISupportInitialize)(this.pcbIcon)).EndInit();
-         ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
          ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
-         this.groupBoxFilter.ResumeLayout(false);
-         this.groupBoxFilter.PerformLayout();
          this.ResumeLayout(false);
          this.PerformLayout();
 
@@ -518,26 +514,25 @@
         private System.Windows.Forms.TextBox txtFilter;
         private System.Windows.Forms.Panel pnlRodape;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label btnHome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton rbtProvider;
-        private System.Windows.Forms.RadioButton rbtModel;
+        private System.Windows.Forms.RadioButton rbtSize;
+        private System.Windows.Forms.RadioButton rbtDescription;
         private System.Windows.Forms.RadioButton rbtType;
         private System.Windows.Forms.PictureBox btnDelete;
         private System.Windows.Forms.GroupBox groupBoxFilter;
+        private System.Windows.Forms.PictureBox btnMovement;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn codproduct;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeproduct;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionproduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn providerproduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sizeproduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn provider;
+        private System.Windows.Forms.DataGridViewTextBoxColumn size;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn value;
-        private System.Windows.Forms.DataGridViewTextBoxColumn storageproduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valuetotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn storage;
         private System.Windows.Forms.DataGridViewTextBoxColumn imageproduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valueproduct;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusproduct;
     }
 }

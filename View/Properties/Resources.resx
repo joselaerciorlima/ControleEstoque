@@ -157,14 +157,14 @@
   <data name="modify_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\modify-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="moviment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\moviment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="movement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\movement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="moviment_desable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\moviment-desable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="movement_desable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\movement_desable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="moviment_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\moviment-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="movement_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\movement_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="no_image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\no_image.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

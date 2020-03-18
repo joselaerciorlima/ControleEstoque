@@ -32,17 +32,13 @@ namespace View
             case ActivityModel.Register:
                lbltitleForm.Text = "CADASTRAR PRODUTO";
                txtCode.Text = (productController.GetNewCodProduct() + 1).ToString();
+               groupBoxStatus.Visible = false;
                break;
             case ActivityModel.Update:
-               lbltitleForm.Text = "ATUALIZAR CADASTRO DO PRODUTO";
+               lbltitleForm.Text = "ATUALIZAR CADASTRO";
                LoadData();
                groupBoxStatus.Enabled = true;
-               break;
-            case ActivityModel.Search:
-               break;
-            case ActivityModel.Select:
-               break;
-            case ActivityModel.Delete:
+               groupBoxStatus.Visible = true;
                break;
          }
       }
@@ -86,10 +82,6 @@ namespace View
          txtCode.Text = this.selectedProduct.codproduct.ToString();
          cbxType.SelectedItem = this.selectedProduct.typeproduct;
          txtDescription.Text = this.selectedProduct.descriptionproduct;
-         txtProvider.Text = this.selectedProduct.providerproduct;
-         txtStorage.Text = this.selectedProduct.storageproduct;
-         cbxSize.SelectedItem = this.selectedProduct.sizeproduct;
-         txtValue.Text = this.selectedProduct.valueproduct.ToString();
 
          pcbImage.ImageLocation = this.selectedProduct.imageproduct;
 
@@ -114,30 +106,6 @@ namespace View
             txtDescription.Focus();
             return false;
          }
-         if (String.IsNullOrWhiteSpace(txtProvider.Text))
-         {
-            errorProvider.SetError(txtProvider, "Campo obrigatório!");
-            txtProvider.Focus();
-            return false;
-         }
-         if (cbxSize.SelectedIndex <0)
-         {
-            errorProvider.SetError(cbxSize, "Campo obrigatório!");
-            cbxSize.Focus();
-            return false;
-         }
-         if (String.IsNullOrWhiteSpace(txtValue.Text))
-         {
-            errorProvider.SetError(txtValue, "Campo obrigatório!");
-            txtValue.Focus();
-            return false;
-         }
-         if (String.IsNullOrWhiteSpace(txtStorage.Text))
-         {
-            errorProvider.SetError(txtStorage, "Campo obrigatório!");
-            txtStorage.Focus();
-            return false;
-         }
          if (pcbImage.Image == null)
          {
             MessageBox.Show("Você esqueceu de cadastrar uma imagem para este produto!", "Op's!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -158,10 +126,6 @@ namespace View
 
                product.typeproduct = cbxType.SelectedItem.ToString();
                product.descriptionproduct = txtDescription.Text;
-               product.providerproduct = txtProvider.Text;
-               product.sizeproduct = cbxSize.SelectedItem.ToString();
-               product.valueproduct = Convert.ToDecimal(txtValue.Text);
-               product.storageproduct = txtStorage.Text;
                product.imageproduct = uploadImage.SaveImage(txtCode.Text,pcbImage.ImageLocation);
                
                int code = productController.Register(product); //Chama o método de INSERT que está dentro da classe ProductControler passando o objeto controle como parâmetro. Ela foi instânciada globalmente.
@@ -187,10 +151,6 @@ namespace View
                product.codproduct = this.selectedProduct.codproduct;
                product.typeproduct = cbxType.SelectedItem.ToString();
                product.descriptionproduct = txtDescription.Text;
-               product.providerproduct = txtProvider.Text;
-               product.sizeproduct = cbxSize.SelectedItem.ToString();
-               product.valueproduct = Convert.ToDecimal(txtValue.Text);
-               product.storageproduct = txtStorage.Text;
 
                if (!newImage)
                {

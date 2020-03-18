@@ -8,7 +8,9 @@ namespace Model
       Register,
       Update,
       Search,
-      Select,
+      Input,
+      Output,
+      Transfer,
       Delete,
    }
 }
