@@ -37,9 +37,9 @@
          this.pcbIcon = new System.Windows.Forms.PictureBox();
          this.btnSave = new System.Windows.Forms.PictureBox();
          this.groupBoxOperation = new System.Windows.Forms.GroupBox();
+         this.rbtTransfer = new System.Windows.Forms.RadioButton();
          this.rbtOutput = new System.Windows.Forms.RadioButton();
          this.rbtInput = new System.Windows.Forms.RadioButton();
-         this.rbtTransfer = new System.Windows.Forms.RadioButton();
          this.cbxStorageSource = new System.Windows.Forms.ComboBox();
          this.label10 = new System.Windows.Forms.Label();
          this.label12 = new System.Windows.Forms.Label();
@@ -62,11 +62,13 @@
          this.label11 = new System.Windows.Forms.Label();
          this.cbxSize = new System.Windows.Forms.ComboBox();
          this.cbxProvider = new System.Windows.Forms.ComboBox();
+         this.btnSearch = new System.Windows.Forms.PictureBox();
          ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.pcbIcon)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
          this.groupBoxOperation.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).BeginInit();
+         ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
          this.SuspendLayout();
          // 
          // label2
@@ -127,6 +129,8 @@
          this.btnCancel.TabIndex = 136;
          this.btnCancel.TabStop = false;
          this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+         this.btnCancel.MouseEnter += new System.EventHandler(this.btnSave_MouseEnter);
+         this.btnCancel.MouseLeave += new System.EventHandler(this.btnSave_MouseLeave);
          // 
          // pcbIcon
          // 
@@ -149,6 +153,8 @@
          this.btnSave.Size = new System.Drawing.Size(158, 50);
          this.btnSave.TabIndex = 135;
          this.btnSave.TabStop = false;
+         this.btnSave.MouseEnter += new System.EventHandler(this.btnSave_MouseEnter);
+         this.btnSave.MouseLeave += new System.EventHandler(this.btnSave_MouseLeave);
          // 
          // groupBoxOperation
          // 
@@ -163,6 +169,17 @@
          this.groupBoxOperation.TabIndex = 137;
          this.groupBoxOperation.TabStop = false;
          this.groupBoxOperation.Text = "Tipo de Movimentação";
+         // 
+         // rbtTransfer
+         // 
+         this.rbtTransfer.AutoSize = true;
+         this.rbtTransfer.Font = new System.Drawing.Font("Arial", 16F);
+         this.rbtTransfer.Location = new System.Drawing.Point(284, 35);
+         this.rbtTransfer.Name = "rbtTransfer";
+         this.rbtTransfer.Size = new System.Drawing.Size(203, 29);
+         this.rbtTransfer.TabIndex = 1;
+         this.rbtTransfer.Text = "TRANFERÊNCIA";
+         this.rbtTransfer.UseVisualStyleBackColor = true;
          // 
          // rbtOutput
          // 
@@ -187,17 +204,6 @@
          this.rbtInput.TabStop = true;
          this.rbtInput.Text = "ENTRADA";
          this.rbtInput.UseVisualStyleBackColor = true;
-         // 
-         // rbtTransfer
-         // 
-         this.rbtTransfer.AutoSize = true;
-         this.rbtTransfer.Font = new System.Drawing.Font("Arial", 16F);
-         this.rbtTransfer.Location = new System.Drawing.Point(284, 35);
-         this.rbtTransfer.Name = "rbtTransfer";
-         this.rbtTransfer.Size = new System.Drawing.Size(203, 29);
-         this.rbtTransfer.TabIndex = 1;
-         this.rbtTransfer.Text = "TRANFERÊNCIA";
-         this.rbtTransfer.UseVisualStyleBackColor = true;
          // 
          // cbxStorageSource
          // 
@@ -304,7 +310,7 @@
          this.label3.AutoSize = true;
          this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.label3.ForeColor = System.Drawing.Color.White;
-         this.label3.Location = new System.Drawing.Point(135, 352);
+         this.label3.Location = new System.Drawing.Point(176, 352);
          this.label3.Margin = new System.Windows.Forms.Padding(0);
          this.label3.Name = "label3";
          this.label3.Size = new System.Drawing.Size(65, 29);
@@ -316,7 +322,7 @@
          // 
          this.txtType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
          this.txtType.Font = new System.Drawing.Font("Arial", 20F);
-         this.txtType.Location = new System.Drawing.Point(140, 385);
+         this.txtType.Location = new System.Drawing.Point(181, 385);
          this.txtType.Name = "txtType";
          this.txtType.ReadOnly = true;
          this.txtType.Size = new System.Drawing.Size(301, 38);
@@ -329,7 +335,7 @@
          this.label4.AutoSize = true;
          this.label4.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.label4.ForeColor = System.Drawing.Color.White;
-         this.label4.Location = new System.Drawing.Point(454, 352);
+         this.label4.Location = new System.Drawing.Point(494, 352);
          this.label4.Margin = new System.Windows.Forms.Padding(0);
          this.label4.Name = "label4";
          this.label4.Size = new System.Drawing.Size(126, 29);
@@ -341,10 +347,10 @@
          // 
          this.txtDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
          this.txtDescription.Font = new System.Drawing.Font("Arial", 20F);
-         this.txtDescription.Location = new System.Drawing.Point(459, 385);
+         this.txtDescription.Location = new System.Drawing.Point(499, 385);
          this.txtDescription.Name = "txtDescription";
          this.txtDescription.ReadOnly = true;
-         this.txtDescription.Size = new System.Drawing.Size(589, 38);
+         this.txtDescription.Size = new System.Drawing.Size(549, 38);
          this.txtDescription.TabIndex = 144;
          // 
          // label5
@@ -482,6 +488,20 @@
          this.cbxProvider.Size = new System.Drawing.Size(348, 39);
          this.cbxProvider.TabIndex = 138;
          // 
+         // btnSearch
+         // 
+         this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(81)))), ((int)(((byte)(116)))));
+         this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+         this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.btnSearch.Location = new System.Drawing.Point(130, 385);
+         this.btnSearch.Name = "btnSearch";
+         this.btnSearch.Size = new System.Drawing.Size(38, 38);
+         this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+         this.btnSearch.TabIndex = 135;
+         this.btnSearch.TabStop = false;
+         this.btnSearch.MouseEnter += new System.EventHandler(this.btnSave_MouseEnter);
+         this.btnSearch.MouseLeave += new System.EventHandler(this.btnSave_MouseLeave);
+         // 
          // frmOperation
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -517,6 +537,7 @@
          this.Controls.Add(this.pnlRodape);
          this.Controls.Add(this.panel2);
          this.Controls.Add(this.lbltitleForm);
+         this.Controls.Add(this.btnSearch);
          this.Controls.Add(this.btnSave);
          this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
          this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -531,6 +552,7 @@
          this.groupBoxOperation.ResumeLayout(false);
          this.groupBoxOperation.PerformLayout();
          ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).EndInit();
+         ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
          this.ResumeLayout(false);
          this.PerformLayout();
 
@@ -571,5 +593,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cbxSize;
         private System.Windows.Forms.ComboBox cbxProvider;
+        private System.Windows.Forms.PictureBox btnSearch;
     }
 }

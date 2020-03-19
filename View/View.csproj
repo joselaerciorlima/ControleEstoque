@@ -247,5 +247,14 @@
   <ItemGroup>
     <None Include="Resources\movement.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_desable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_hover.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

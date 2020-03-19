@@ -105,16 +105,33 @@ namespace Controller
       /// <summary>
       /// Método responsável por fazer uma busca no banco de dados de acordo com o filtro ativado.
       /// </summary>
-      public DataTable Search(string filter, string filterType)
+      public DataTable Search(string filter, string filterType,int operation)
       {
-         string query = "SELECT p.codproduct, p.typeproduct,p.descriptionproduct,p.imageproduct,pr.descriptionprovider, s.descriptionsize,st.descriptionstorage,m.amount,m.valuetotal " +
-            "FROM TBMOVEMENT AS m " +
-            "FULL JOIN TBSTORAGE AS st ON st.codstorage = m.codstorage " +
-            "FULL JOIN TBPROVIDER AS pr ON pr.codprovider = m.codprovider " +
-            "FULL JOIN TBSIZE AS s ON s.codsize = m.codsize " +
-            "FULL JOIN TBPRODUCT AS p  ON m.codproduct = p.codproduct " +
-            "WHERE " + filterType + " LIKE '%" + filter + "%' " +
-            "ORDER BY p.typeproduct";
+         string query;
+
+         if (operation == 0)
+         {
+            query = "SELECT M.codmovement,O.typeoperation,M.dateoperation,ST.descriptionstorage,P.typeproduct,P.descriptionproduct,S.descriptionsize,M.amount,PR.descriptionprovider, M.valuetotal " +
+            "FROM TBMOVEMENT AS M " +
+            "INNER JOIN TBSTORAGE AS ST ON ST.codstorage = M.codstorage " +
+            "INNER JOIN TBPRODUCT AS P  ON M.codproduct = P.codproduct " +
+            "INNER JOIN TBSIZE AS S ON S.codsize = M.codsize " +
+            "INNER JOIN TBPROVIDER AS PR ON PR.codprovider = M.codprovider " +
+            "INNER JOIN TBOPERATION AS O ON O.codoperation = M.codoperation " +
+            "WHERE " + filterType + " LIKE '%" + filter + "%'";
+         }
+         else
+         {
+            query = "SELECT M.codmovement,O.typeoperation,M.dateoperation,ST.descriptionstorage,P.typeproduct,P.descriptionproduct,S.descriptionsize,M.amount,PR.descriptionprovider, M.valuetotal " +
+            "FROM TBMOVEMENT AS M " +
+            "INNER JOIN TBSTORAGE AS ST ON ST.codstorage = M.codstorage " +
+            "INNER JOIN TBPRODUCT AS P  ON M.codproduct = P.codproduct " +
+            "INNER JOIN TBSIZE AS S ON S.codsize = M.codsize " +
+            "INNER JOIN TBPROVIDER AS PR ON PR.codprovider = M.codprovider " +
+            "INNER JOIN TBOPERATION AS O ON O.codoperation = M.codoperation " +
+            "WHERE " + filterType + " LIKE '%" + filter + "%' AND O.codoperation = " + operation;
+         }
+         
 
          SqlCommand command = new SqlCommand(query, connectionDataBase.Conect());
          
